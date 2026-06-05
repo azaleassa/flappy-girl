@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Flappy Bird 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <canvas id="game" width="400" height="600"></canvas>
+  <div class="hud"><div class="score" id="score">0</div></div>
+
+  <div class="overlay" id="startScreen">
+    <div class="title">Flappy Bird</div>
+    <div class="sub">Кликни или нажми Пробел<br>чтобы взлететь!</div>
+    <button class="btn" id="startBtn">Играть ✨</button>
+  </div>
+
+  <div class="overlay hidden" id="gameOverScreen">
+    <div class="title">Ой! 💔</div>
+    <div class="hearts">💗 💕 💗</div>
+    <div class="sub">Счёт: <span id="finalScore">0</span><br>Рекорд: <span id="bestScore">0</span></div>
+    <div class="sub small">Пробел или кнопка — сыграть ещё раз</div>
+    <button class="btn" id="restartBtn">Ещё раз 🌷</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>

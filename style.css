@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  height: 100%;
+  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
+  background: linear-gradient(135deg, #ffd1dc, #e0bbf5, #c2e0f5);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.wrap {
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.6), 0 0 80px rgba(255, 182, 193, 0.4);
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  background: linear-gradient(180deg, #ffe4ec 0%, #ffd6f0 40%, #d6e5ff 100%);
+}
+.hud {
+  position: absolute;
+  top: 14px;
+  left: 0; right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+.score {
+  color: #fff;
+  font-size: 56px;
+  font-weight: bold;
+  text-shadow: 3px 3px 0 #ff69b4, -1px -1px 0 #ff1493, 0 0 12px #ff85c1;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 0 #ff1493;
+  pointer-events: none;
+}
+.overlay.hidden { display: none; }
+.title {
+  font-size: 48px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-shadow: 3px 3px 0 #ff69b4, 0 0 20px #ffb6c1;
+}
+#startScreen .title {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+}
+#startScreen .sub {
+  margin-top: 200px;
+}
+.sub {
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #fff5fa;
+  text-shadow: 1px 1px 0 #ff69b4;
+  line-height: 1.4;
+}
+.sub.small {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+.btn {
+  pointer-events: auto;
+  background: linear-gradient(180deg, #ff8fbc, #ff5fa2);
+  color: white;
+  border: 3px solid #fff;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #c8467a, 0 0 20px rgba(255, 105, 180, 0.5);
+  text-shadow: 1px 1px 0 #c8467a;
+  transition: transform 0.1s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #c8467a; }
+.hearts {
+  font-size: 28px;
+  letter-spacing: 8px;
+  margin: 8px 0;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
